@@ -25,12 +25,13 @@ public class Card implements Comparable<Card> {
 
   @Override
   public String toString() {
-    return String.format("%s %s", rank,suit);
+//    return String.format("%s %s", rank, suit);
+    return getSymbol();
   }
 
   @Override
   public int compareTo(Card other) {
-    int comparison= suit.compareTo(other.suit);
+    int comparison = suit.compareTo(other.suit);
     if (comparison == 0) {
       comparison = rank.compareTo(other.rank);
     }
