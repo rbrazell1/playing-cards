@@ -1,7 +1,6 @@
 package edu.cnm.deepdive.controller;
 
 import edu.cnm.deepdive.model.Card;
-import edu.cnm.deepdive.model.CardColorComparator;
 import edu.cnm.deepdive.model.Deck;
 import edu.cnm.deepdive.model.Pile;
 import java.security.SecureRandom;
@@ -73,5 +72,20 @@ public class Trick {
   private void display() {
     System.out.printf(PILE_FORMAT, "Red", redPile);
     System.out.printf(PILE_FORMAT, "Black", blackPile);
+  }
+
+  public static class CardColorComparator implements Comparator<Card> {
+
+    @Override
+    public int compare(Card card1, Card card2) {
+      int comparison = card1.getSuit().getColor().compareTo(card2.getSuit().getColor());
+      if (comparison == 0) {
+        comparison = card1.getSuit().compareTo(card2.getSuit());
+      }
+      if (comparison == 0) {
+        comparison = card1.getRank().compareTo(card2.getRank());
+      }
+      return comparison;
+    }
   }
 }
