@@ -4,7 +4,7 @@ edu/cnm/deepdive/model/Suit.java
 edu/cnm/deepdive/controller/Trick.java
  edu.cnm.deepdive.controller.Trick
  edu.cnm.deepdive.controller.Trick$1
- edu.cnm.deepdive.controller.Trick$CardColorComparator
+ edu.cnm.deepdive.controller.Trick$1CardColorComparator
 edu/cnm/deepdive/model/Card.java
  edu.cnm.deepdive.model.Card
 edu/cnm/deepdive/model/Deck.java

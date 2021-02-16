@@ -63,6 +63,20 @@ public class Trick {
   }
 
   private void sort() {
+    class CardColorComparator implements Comparator<Card> {
+
+      @Override
+      public int compare(Card card1, Card card2) {
+        int comparison = card1.getSuit().getColor().compareTo(card2.getSuit().getColor());
+        if (comparison == 0) {
+          comparison = card1.getSuit().compareTo(card2.getSuit());
+        }
+        if (comparison == 0) {
+          comparison = card1.getRank().compareTo(card2.getRank());
+        }
+        return comparison;
+      }
+    }
     Comparator<Card> comparator = new CardColorComparator();
     redPile.sort(comparator);
     blackPile.sort(comparator);
@@ -74,18 +88,4 @@ public class Trick {
     System.out.printf(PILE_FORMAT, "Black", blackPile);
   }
 
-  public static class CardColorComparator implements Comparator<Card> {
-
-    @Override
-    public int compare(Card card1, Card card2) {
-      int comparison = card1.getSuit().getColor().compareTo(card2.getSuit().getColor());
-      if (comparison == 0) {
-        comparison = card1.getSuit().compareTo(card2.getSuit());
-      }
-      if (comparison == 0) {
-        comparison = card1.getRank().compareTo(card2.getRank());
-      }
-      return comparison;
-    }
-  }
 }
