@@ -4,16 +4,25 @@ edu/cnm/deepdive/model/Suit.java
 edu/cnm/deepdive/controller/Trick.java
  edu.cnm.deepdive.controller.Trick
  edu.cnm.deepdive.controller.Trick$1
- edu.cnm.deepdive.controller.Trick$2
 edu/cnm/deepdive/model/Card.java
  edu.cnm.deepdive.model.Card
+edu/cnm/deepdive/util/QuickSorter.java
+ edu.cnm.deepdive.util.QuickSorter
 edu/cnm/deepdive/model/Deck.java
  edu.cnm.deepdive.model.Deck
 edu/cnm/deepdive/model/Dealable.java
  edu.cnm.deepdive.model.Dealable
+edu/cnm/deepdive/model/Shoe.java
+ edu.cnm.deepdive.model.Shoe
+ edu.cnm.deepdive.model.Shoe$1
+ edu.cnm.deepdive.model.Shoe$Builder
 edu/cnm/deepdive/model/Rank.java
  edu.cnm.deepdive.model.Rank
 edu/cnm/deepdive/controller/Main.java
  edu.cnm.deepdive.controller.Main
+edu/cnm/deepdive/util/AbstractSorter.java
+ edu.cnm.deepdive.util.AbstractSorter
 edu/cnm/deepdive/model/Pile.java
  edu.cnm.deepdive.model.Pile
+edu/cnm/deepdive/util/MergeSorter.java
+ edu.cnm.deepdive.util.MergeSorter
